@@ -1,0 +1,195 @@
+﻿<Window x:Class="UiGeras.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UiGeras"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+                WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="MidnightBlue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="DarkBlue"
+          Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Motociklai"
+                       Foreground="LightGray"
+                       Grid.Column="1"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       FontFamily="Fonts/#Dosis"
+                       FontWeight="Medium"
+                       FontSize="16"/>
+
+            <TextBlock Text="Menu"
+                       Foreground="LightGray"
+                       Grid.Column="2"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="16"/>
+
+            <TextBlock Text="Firmos"
+                       Foreground="LightGray"
+                       Grid.Column="3"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="16"/>
+
+            <TextBlock Text="Grafika"
+                       Foreground="LightGray"
+                       Grid.Column="4"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="16"/>
+        </Grid>
+
+        <StackPanel Grid.Row="1"
+                    Margin="50,90,0,0">
+
+            <StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="50" Height="50"
+                       Source="images/cross.png"
+                           RenderOptions.BitmapScalingMode="Fant"/>
+                    <TextBlock Text="ŽemiųMX"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="Medium"
+                           VerticalAlignment="Center"
+                           FontFamily="Fonts/#Dosis"
+                               Margin="0,15,10,0"/>
+                </StackPanel>
+                <TextBlock Text="Geriausi"
+                       Foreground="White"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                           Margin="0,10,0,0"/>
+                <TextBlock Text="Motociklai"
+                       Foreground="White"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                           Margin="0,02,0,0"/>
+
+                <TextBlock Text="Lietuvoje"
+                       Foreground="White"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                           Margin="0,02,0,0"/>
+
+                <TextBlock Text="Pirmoji ivairių firminių motociklų parduotuvė vienoje vietoje,                                                   pirk brangiau - mokėk mažiau!"
+                       Foreground="White"
+                       FontSize="12"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"
+                        FontFamily="Fonts/#Dosis"
+                       TextWrapping="Wrap"
+                           Margin="0,05,10,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+                <Button Content="Pirkti"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="RoyalBlue"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+                <Button Content="Modeliai"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="CadetBlue"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Background" Value="BlueViolet"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
